@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@drawable/fundo_degrade"
     tools:context=".activity.LoginActivity">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/texto_Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/fundo_caixa_texto"
         android:ems="10"
         android:hint="Digite seu Login"
         android:inputType="textPersonName"
@@ -25,47 +26,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/texto_Senha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/fundo_caixa_texto"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.06999999" />
+        app:layout_constraintTop_toBottomOf="@+id/texto_Login" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botao_Login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/backGround_Color"
+        android:background="@drawable/fundo_botao"
         android:text="@string/botao_Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/texto_Senha" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/texto_CriarCadastro"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/botao_Cadastrar"
-        android:textColor="@color/textColor"
+        android:layout_marginTop="5dp"
+        android:minHeight="48dp"
+        android:text="@string/texto_Cadastro"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.00999999" />
+        app:layout_constraintTop_toBottomOf="@+id/botao_Login"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

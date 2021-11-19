@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.applavanderia.R;
+import com.example.applavanderia.activity.util.ParseErrors;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -46,6 +47,7 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -63,9 +65,11 @@ public class CadastroActivity extends AppCompatActivity {
             public void done(ParseException e) {
                 if (e == null) { //Sucesso ao salvar
                     Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso.", Toast.LENGTH_LONG).show();
+                    textoLoginCadastro.callOnClick();
                 }else { //Erro ao salvar
-                    Toast.makeText(CadastroActivity.this, "Erro ao cadastrar usuário. "
-                            + e.getMessage(), Toast.LENGTH_LONG).show();
+                    ParseErrors parseErrors = new ParseErrors();
+                    String erro = parseErrors.getErro(e.getCode());
+                    Toast.makeText(CadastroActivity.this, erro, Toast.LENGTH_LONG).show();
                 }
             }
         });

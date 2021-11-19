@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">AppLavanderia</string>
-    <string name="botao_Cadastrar">Cadastrar</string>
     <string name="botao_Login">Login</string>
     <string name="efetuar_Cadastro">Efetuar Cadastro</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">LIwlfqas7AeHrYcXj3AB6TXXEAJCgZu3SgM6dPAN</string>
+    <string name="back4app_client_key">N5p1SWlkfRfON9YCQjNrK608bDQOPeGeeEl4UFvX</string>
+    <string name="TextoCadastro">Não tem conta? Crie uma</string>
+    <string name="botao_Cadastrar">Cadastrar</string>
+    <string name="texto_Usuario">Digite seu Usuário</string>
+    <string name="texto_email">Digite seu e-mail</string>
+    <string name="texto_Senha">Digite sua senha</string>
+    <string name="texto_Cadastro">Não tem conta? Crie uma</string>
+    <string name="texto_Login">Já tem uma conta? Faça o Login</string>
+
 </resources>
