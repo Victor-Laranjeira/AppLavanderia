@@ -15,5 +15,7 @@
     <string name="texto_Senha">Digite sua senha</string>
     <string name="texto_Cadastro">Não tem conta? Crie uma</string>
     <string name="texto_Login">Já tem uma conta? Faça o Login</string>
+    <string name="texto_Cpf">Digite seu CPF</string>
+    <string name="texto_Numero">Digite seu Número de telefone</string>
 
 </resources>

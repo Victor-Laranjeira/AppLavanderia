@@ -23,6 +23,8 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText textoSenha;
     private Button botaoCadastrar;
     private TextView textoLoginCadastro;
+    private EditText textoCpf;
+    private EditText textoTelefone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,11 @@ public class CadastroActivity extends AppCompatActivity {
         textoUsuario = (EditText)findViewById(R.id.texto_Usuario);
         textoEmail = (EditText)findViewById(R.id.texto_Email);
         textoSenha = (EditText)findViewById(R.id.texto_SenhaCadastro);
-        botaoCadastrar = (Button)findViewById(R.id.botao_Cadastrar);
         textoLoginCadastro = (TextView)findViewById(R.id.texto_LoginCadastro);
+        textoCpf = (EditText)findViewById(R.id.texto_Cpf);
+        textoTelefone = (EditText)findViewById(R.id.texto_Telefone);
+        botaoCadastrar = (Button)findViewById(R.id.botao_Cadastrar);
+
 
         botaoCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +63,8 @@ public class CadastroActivity extends AppCompatActivity {
         usuario.setUsername(textoUsuario.getText().toString());
         usuario.setEmail(textoEmail.getText().toString());
         usuario.setPassword(textoSenha.getText().toString());
+        usuario.put("Cpf", textoCpf.getText().toString());
+        usuario.put("Telefone", textoTelefone.getText().toString());
 
         //Salvar dados do usuario
         usuario.signUpInBackground(new SignUpCallback() {

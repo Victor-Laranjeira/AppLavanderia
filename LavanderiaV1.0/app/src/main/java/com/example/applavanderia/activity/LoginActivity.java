@@ -45,13 +45,14 @@ public class LoginActivity extends AppCompatActivity{
                 .server(getString(R.string.back4app_server_url))
                 .build());
 
+
         //ParseUser.enableAutomaticUser();
         ParseACL defaultACL = new ParseACL();
         // Opitionally enable public read access
         defaultACL.setPublicReadAccess(true);
         //ParseACL.setDefaultACL(defaultACL, true);
 
-        //ParseUser.logOut();
+        ParseUser.logOut();
 
         //Verificar se o usuário está logado.
         verificarUsuarioLogado();
