@@ -17,5 +17,9 @@
     <string name="texto_Login">Já tem uma conta? Faça o Login</string>
     <string name="texto_Cpf">Digite seu CPF</string>
     <string name="texto_Numero">Digite seu Número de telefone</string>
+    <string name="action_Configuracoes">Configurações</string>
+    <string name="action_Sair">Sair</string>
+    <string name="Texto_TipoLavagem1">Lavagem simples</string>
+    <string name="texto_TipoLavagem2">Lavagem Completa</string>
 
 </resources>

@@ -12,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.applavanderia.R;
 import com.example.applavanderia.activity.util.ParseErrors;
 import com.parse.LogInCallback;
-import com.parse.Parse;
-import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
@@ -23,6 +21,7 @@ public class LoginActivity extends AppCompatActivity{
     private TextView textoLogin;
     private TextView textoSenha;
     private Button botaoLogin;
+    private StarterApplication starterApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,26 +32,6 @@ public class LoginActivity extends AppCompatActivity{
         textoLogin = (TextView)findViewById(R.id.texto_Login);
         textoSenha = (TextView)findViewById(R.id.texto_Senha);
         botaoLogin = (Button) findViewById(R.id.botao_Login);
-
-
-        // Habilite armazenamento local
-        Parse.enableLocalDatastore(this);
-
-        // Codigo de configuração do app
-        Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-                .applicationId(getString(R.string.back4app_app_id))
-                .clientKey(getString(R.string.back4app_client_key))
-                .server(getString(R.string.back4app_server_url))
-                .build());
-
-
-        //ParseUser.enableAutomaticUser();
-        ParseACL defaultACL = new ParseACL();
-        // Opitionally enable public read access
-        defaultACL.setPublicReadAccess(true);
-        //ParseACL.setDefaultACL(defaultACL, true);
-
-        ParseUser.logOut();
 
         //Verificar se o usuário está logado.
         verificarUsuarioLogado();
