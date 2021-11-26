@@ -9,16 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applavanderia.R;
-import com.example.applavanderia.activity.model.Lavagem;
+import com.example.applavanderia.activity.model.LavagemCompleta;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+public class Adapter2 extends RecyclerView.Adapter<Adapter2.MyViewHolder> {
 
-    private List<Lavagem>  listaLavagem;
+    private List<LavagemCompleta> listaLavagem2;
 
-    public Adapter(List<Lavagem> listaLavagem) {
-        this.listaLavagem = listaLavagem;
+    public Adapter2(List<LavagemCompleta> listaLavagem2) {
+        this.listaLavagem2 = listaLavagem2;
     }
 
     @NonNull
@@ -33,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Lavagem lavagem = listaLavagem.get(position);
+        LavagemCompleta lavagem = listaLavagem2.get(position);
         holder.titulo.setText(lavagem.getTitulo());
         holder.descricao.setText(lavagem.getDescricao());
         holder.real.setText("R$");
@@ -42,7 +42,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return listaLavagem.size();
+        return listaLavagem2.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

@@ -10,4 +10,53 @@
         android:id="@+id/toolbar_Principal"
         layout="@layout/toolbar" />
 
+    <TextView
+        android:id="@+id/texto_Carrinho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/texto_Titulo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_Principal" />
+
+    <TextView
+        android:id="@+id/texto_TituloCarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/text_ColorAdapter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_Carrinho" />
+
+    <TextView
+        android:id="@+id/texto_DescricaoCarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="TextView"
+        android:textColor="@color/text_ColorDescricaoAdapter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_TituloCarrinho" />
+
+    <TextView
+        android:id="@+id/texto_PrecoCarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_DescricaoCarrinho" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

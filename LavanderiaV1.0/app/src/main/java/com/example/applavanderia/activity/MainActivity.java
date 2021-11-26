@@ -17,7 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.applavanderia.R;
 import com.example.applavanderia.activity.adapter.Adapter;
+import com.example.applavanderia.activity.adapter.Adapter2;
 import com.example.applavanderia.activity.model.Lavagem;
+import com.example.applavanderia.activity.model.LavagemCompleta;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView1;
     private RecyclerView recyclerView2;
     private List<Lavagem> listaLavagem = new ArrayList<>();
+    private List<LavagemCompleta> listaLavagem2 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,14 +45,15 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1 = findViewById(R.id.recycler_View1);
         recyclerView2 = findViewById(R.id.recycler_View2);
 
-        //Listagem de lavagem completa
-        this.criarLavagemCompleta();
-
         //Listagem de lavagem simples
         this.criarLavagem();
 
+        //Listagem de lavagem completa
+        this.criarLavagemCompleta();
+
         //Configurar Adapater
         Adapter adapter = new Adapter(listaLavagem);
+        Adapter2 adapter2 = new Adapter2(listaLavagem2);
 
         //Configurar RecyclerView
         RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(getApplicationContext());
@@ -57,13 +61,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1.setHasFixedSize(true);
         recyclerView1.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recyclerView1.setAdapter(adapter);
-
-        //Configurar RecyclerView2
-        RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getApplicationContext());
-        recyclerView2.setLayoutManager(layoutManager2);
-        recyclerView2.setHasFixedSize(true);
-        recyclerView2.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
-        recyclerView2.setAdapter(adapter);
 
         //Configurar evento de click lavagem simples
         recyclerView1.addOnItemTouchListener(
@@ -75,12 +72,14 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             @Override
             public void onLongItemClick(View view, int position) {
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             @Override
@@ -88,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }));
+
+
+
+        //Configurar RecyclerView2
+        RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getApplicationContext());
+        recyclerView2.setLayoutManager(layoutManager2);
+        recyclerView2.setHasFixedSize(true);
+        recyclerView2.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
+        recyclerView2.setAdapter(adapter2);
 
         //Configurar evento de click lavagem completa
         recyclerView2.addOnItemTouchListener(
@@ -99,12 +107,14 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View view, int position) {
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             @Override
             public void onLongItemClick(View view, int position) {
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             @Override
@@ -127,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
                 deslogarUsuario();
                 return true;
             case R.id.action_Configuracoes:
+                Intent intent = new Intent(MainActivity.this, ConfiguracaoActivity.class);
+                startActivity(intent);
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -153,16 +166,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void criarLavagemCompleta() {
-        Lavagem lavagem = new Lavagem("1 peça (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "11,00");
-        this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("2 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "22,00");
-        this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("3 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "35,00");
-        this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("4 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "47,00");
-        this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("5 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "60,00");
-        this.listaLavagem.add(lavagem);
+        LavagemCompleta lavagemCompleta = new LavagemCompleta("1 peça (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "11,00");
+        this.listaLavagem2.add(lavagemCompleta);
+        lavagemCompleta = new LavagemCompleta("2 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "22,00");
+        this.listaLavagem2.add(lavagemCompleta);
+        lavagemCompleta = new LavagemCompleta("3 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "35,00");
+        this.listaLavagem2.add(lavagemCompleta);
+        lavagemCompleta = new LavagemCompleta("4 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "47,00");
+        this.listaLavagem2.add(lavagemCompleta);
+        lavagemCompleta = new LavagemCompleta("5 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "60,00");
+        this.listaLavagem2.add(lavagemCompleta);
     }
 
 }

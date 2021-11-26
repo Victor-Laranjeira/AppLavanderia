@@ -19,7 +19,15 @@
     <string name="texto_Numero">Digite seu Número de telefone</string>
     <string name="action_Configuracoes">Configurações</string>
     <string name="action_Sair">Sair</string>
+    <string name="action_Limpar">Limpar</string>
+    <string name="action_Voltar">Voltar</string>
     <string name="Texto_TipoLavagem1">Lavagem simples</string>
     <string name="texto_TipoLavagem2">Lavagem Completa</string>
+    <string name="texto_Titulo">Carrinho</string>
+    <string name="texto_Deletar">Excluir conta</string>
+    <string name="botao_Excluir">Excluir Conta</string>
+    <string name="Texto_Trocar_Email">Alterar e-mail</string>
+    <string name="botao_Alterar">Alterar</string>
+    <string name="botao_Trocar_Email">Trocar e-mail</string>
 
 </resources>

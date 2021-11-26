@@ -5,21 +5,27 @@
       <map>
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/fundo_botao.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/fundo_botao_cadastro.xml" value="0.21388888888888888" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/fundo_botao_configuracao.xml" value="0.2203125" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/fundo_caixa_texto.xml" value="0.21388888888888888" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/fundo_degrade.xml" value="0.2203125" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/drawable/sombra.xml" value="0.2101851851851852" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_alterar_email.xml" value="0.25" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
-        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_carrinho.xml" value="0.25" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_carrinho.xml" value="0.5" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_configuracao.xml" value="0.33" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_sacola.xml" value="0.19814814814814816" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_starter_application.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_starter_application2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/activity_validador.xml" value="0.25" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/adapter_lista.xml" value="0.4083333333333333" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/model_carrinho.xml" value="0.33" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/sombra.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/menu/menu_main_carrinho.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/menu/menu_main_configuracao.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Victor/AppLavanderiaRepository/AppLavanderia/LavanderiaV1.0/app/src/main/res/xml/menu_main.xml" value="0.20416666666666666" />
       </map>
     </option>

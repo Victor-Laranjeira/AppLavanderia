@@ -1,16 +1,16 @@
 package com.example.applavanderia.activity.model;
 
-public class Lavagem {
+public class LavagemCompleta {
     public String titulo;
     private String descricao;
     private String preco;
 
 
-    public Lavagem() {
+    public LavagemCompleta() {
 
     }
 
-    public Lavagem(String titulo, String descricao, String preco) {
+    public LavagemCompleta(String titulo, String descricao, String preco) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.preco = preco;

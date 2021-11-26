@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppLavanderia">
         <activity
+            android:name=".activity.AlterarEmail"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ConfiguracaoActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CarrinhoActivity"
             android:exported="false" />
         <activity
