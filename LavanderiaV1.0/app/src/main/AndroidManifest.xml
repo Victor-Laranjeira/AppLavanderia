@@ -15,12 +15,15 @@
         android:theme="@style/Theme.AppLavanderia">
         <activity
             android:name=".activity.AlterarEmail"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".activity.ConfiguracaoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".activity.CarrinhoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".activity.CadastroActivity"
@@ -41,6 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"

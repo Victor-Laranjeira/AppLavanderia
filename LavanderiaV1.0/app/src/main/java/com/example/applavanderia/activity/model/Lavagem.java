@@ -1,13 +1,12 @@
 package com.example.applavanderia.activity.model;
 
 public class Lavagem {
-    public String titulo;
+    private String titulo;
     private String descricao;
     private String preco;
 
 
     public Lavagem() {
-
     }
 
     public Lavagem(String titulo, String descricao, String preco) {

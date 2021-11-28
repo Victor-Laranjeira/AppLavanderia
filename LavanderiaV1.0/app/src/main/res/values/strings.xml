@@ -29,5 +29,12 @@
     <string name="Texto_Trocar_Email">Alterar e-mail</string>
     <string name="botao_Alterar">Alterar</string>
     <string name="botao_Trocar_Email">Trocar e-mail</string>
+    <string name="texto_Resumo">Resumo dos valores</string>
+    <string name="texto_Real">R$</string>
+    <string name="texto_SubTotal">Subtotal</string>
+    <string name="texto_Entrega">Taxa de entrega</string>
+    <string name="texto_TaxaEntrega">6,99</string>
+    <string name="texto_Total">Total</string>
+    <string name="botao_Pedido">Fazer Pedido</string>
 
 </resources>

@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.applavanderia.R;
 import com.example.applavanderia.activity.adapter.Adapter;
 import com.example.applavanderia.activity.adapter.Adapter2;
+import com.example.applavanderia.activity.model.CarrinhoTexto;
 import com.example.applavanderia.activity.model.Lavagem;
 import com.example.applavanderia.activity.model.LavagemCompleta;
 import com.parse.ParseUser;
@@ -38,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         //Configura toolbar
-        toolbarPrincipal = (Toolbar) findViewById(R.id.toolbar_Principal);
+        toolbarPrincipal = findViewById(R.id.toolbar_Principal);
         setSupportActionBar(toolbarPrincipal);
 
         recyclerView1 = findViewById(R.id.recycler_View1);
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         //Configurar Adapater
         Adapter adapter = new Adapter(listaLavagem);
         Adapter2 adapter2 = new Adapter2(listaLavagem2);
+
 
         //Configurar RecyclerView
         RecyclerView.LayoutManager layoutManager1 = new LinearLayoutManager(getApplicationContext());
@@ -70,14 +73,20 @@ public class MainActivity extends AppCompatActivity {
                         new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                int tipo = 0;
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("tipo", tipo);
                 startActivity(intent);
                 finish();
             }
 
             @Override
             public void onLongItemClick(View view, int position) {
+                int tipo = 0;
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("tipo", tipo);
                 startActivity(intent);
                 finish();
             }
@@ -105,14 +114,20 @@ public class MainActivity extends AppCompatActivity {
                         new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
+                int tipo = 1;
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("tipo", tipo);
                 startActivity(intent);
                 finish();
             }
 
             @Override
             public void onLongItemClick(View view, int position) {
+                int tipo = 1;
                 Intent intent = new Intent(MainActivity.this, CarrinhoActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("tipo", tipo);
                 startActivity(intent);
                 finish();
             }
@@ -130,6 +145,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+    private void deslogarUsuario() {
+        ParseUser.logOut();
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -144,12 +166,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    private void deslogarUsuario() {
-        ParseUser.logOut();
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
     }
 
     public void criarLavagem() {
@@ -176,6 +192,56 @@ public class MainActivity extends AppCompatActivity {
         this.listaLavagem2.add(lavagemCompleta);
         lavagemCompleta = new LavagemCompleta("5 peças (Lavagem completa)", "Lavagem completa, tira manchas profundas com uso de produto adequado", "60,00");
         this.listaLavagem2.add(lavagemCompleta);
+    }
+
+    public void carrinhoParametroSimples(int position) {
+        CarrinhoTexto carrinhoTexto = new CarrinhoTexto();
+        if (position == 0) {
+            carrinhoTexto.setTituloCarrinho("1 Peça (Lavagem simples)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem simples de 1 peça de roupa a sua escolha");
+            carrinhoTexto.setPrecoCarrinho("5,00");
+        }else if (position == 1) {
+            carrinhoTexto.setTituloCarrinho("2 Peças (Lavagem simples)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem simples de 2 peça de roupa a sua escolha");
+            carrinhoTexto.setPrecoCarrinho("10,00");
+        }else if (position == 2) {
+            carrinhoTexto.setTituloCarrinho("3 Peças (Lavagem simples)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem simples de 3 peça de roupa a sua escolha");
+            carrinhoTexto.setPrecoCarrinho("17,00");
+        }else if (position == 3) {
+            carrinhoTexto.setTituloCarrinho("4 Peças (Lavagem simples)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem simples de 4 peça de roupa a sua escolha");
+            carrinhoTexto.setPrecoCarrinho("24,00");
+        }else if (position == 4) {
+            carrinhoTexto.setTituloCarrinho("5 Peças (Lavagem simples)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem simples de 5 peça de roupa a sua escolha");
+            carrinhoTexto.setPrecoCarrinho("30,00");
+        }
+    }
+
+    public void carrinhoParametroCompleto (int position) {
+        CarrinhoTexto carrinhoTexto = new CarrinhoTexto();
+        if (position == 0) {
+            carrinhoTexto.setTituloCarrinho("1 Peça (Lavagem completa)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem completa, tira manchas profundas com uso de produto adequados");
+            carrinhoTexto.setPrecoCarrinho("11,00");
+        }else if (position == 1) {
+            carrinhoTexto.setTituloCarrinho("2 Peças (Lavagem completa)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem completa, tira manchas profundas com uso de produto adequados");
+            carrinhoTexto.setPrecoCarrinho("22,00");
+        }else if (position == 2) {
+            carrinhoTexto.setTituloCarrinho("3 Peças (Lavagem completa)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem completa, tira manchas profundas com uso de produto adequados");
+            carrinhoTexto.setPrecoCarrinho("35,00");
+        }else if (position == 3) {
+            carrinhoTexto.setTituloCarrinho("4 Peças (Lavagem completa)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem completa, tira manchas profundas com uso de produto adequados");
+            carrinhoTexto.setPrecoCarrinho("47,00");
+        }else if (position == 4) {
+            carrinhoTexto.setTituloCarrinho("5 Peças (Lavagem completa)");
+            carrinhoTexto.setDescricaoCarrinho("Lavagem completa, tira manchas profundas com uso de produto adequados");
+            carrinhoTexto.setPrecoCarrinho("60,00");
+        }
     }
 
 }

@@ -4,15 +4,22 @@ public class CarrinhoTexto {
     private String tituloCarrinho;
     private String descricaoCarrinho;
     private String precoCarrinho;
+    private String precoTaxaEntrega;
 
-    public CarrinhoTexto() {
-
-    }
+    public CarrinhoTexto() {}
 
     public CarrinhoTexto(String tituloCarrinho, String descricaoCarrinho, String precoCarrinho) {
         this.tituloCarrinho = tituloCarrinho;
         this.descricaoCarrinho = descricaoCarrinho;
         this.precoCarrinho = precoCarrinho;
+    }
+
+    public String getPrecoTaxaEntrega() {
+        return precoTaxaEntrega;
+    }
+
+    public void setPrecoTaxaEntrega(String precoTaxaEntrega) {
+        this.precoTaxaEntrega = precoTaxaEntrega;
     }
 
     public String getTituloCarrinho() {
