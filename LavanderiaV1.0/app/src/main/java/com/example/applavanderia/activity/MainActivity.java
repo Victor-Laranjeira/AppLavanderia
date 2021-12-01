@@ -171,13 +171,13 @@ public class MainActivity extends AppCompatActivity {
     public void criarLavagem() {
         Lavagem lavagem = new Lavagem("1 Peça (Lavagem simples)", "Lavagem simples de 1 peça de roupa a sua escolha", "5,00");
         this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("2 Peças (Lavagem simples)", "Lavagem simples de 2 peça de roupa a sua escolha", "10,00");
+        lavagem = new Lavagem("2 Peças (Lavagem simples)", "Lavagem simples de 2 peças de roupa a sua escolha", "10,00");
         this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("3 Peça (Lavagem simples)", "Lavagem simples de 3 peça de roupa a sua escolha", "17,00");
+        lavagem = new Lavagem("3 Peças (Lavagem simples)", "Lavagem simples de 3 peças de roupa a sua escolha", "17,00");
         this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("4 Peça (Lavagem simples)", "Lavagem simples de 4 peça de roupa a sua escolha", "24,00");
+        lavagem = new Lavagem("4 Peças (Lavagem simples)", "Lavagem simples de 4 peças de roupa a sua escolha", "24,00");
         this.listaLavagem.add(lavagem);
-        lavagem = new Lavagem("5 Peça (Lavagem simples)", "Lavagem simples de 5 peça de roupa a sua escolha", "30,00");
+        lavagem = new Lavagem("5 Peças (Lavagem simples)", "Lavagem simples de 5 peças de roupa a sua escolha", "30,00");
         this.listaLavagem.add(lavagem);
     }
 
